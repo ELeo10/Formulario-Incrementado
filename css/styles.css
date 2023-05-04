@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: rgb(164, 164, 212);
+    background-color: rgb(153, 212, 180);
 }
 
 .form-box {
@@ -26,7 +26,7 @@ body {
     text-align: center;
     display: flex;
     box-shadow: 10px;
-    opacity: 95%;
+    opacity: 90%;
 }
 
 h1 {
