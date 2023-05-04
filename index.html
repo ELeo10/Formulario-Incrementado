@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Incrementado</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <div class="form-box">
+        <form id="form">
+            <h1>Formulário</h1>
+            
+            <div class="campoTexto">
+                <input type="text" name="nome" placeholder="Nome" id="nome" required>
+            </div>
+
+            <div class="campoTexto">
+                <input type="email" name="email" placeholder="E-mail" id="email" required>
+            </div>
+
+            <div class="campoTexto">
+                <input type="password" name="senha" placeholder="Senha" id="senha" required>
+            </div>
+
+            <div class="campoTexto">
+                <input type="password" name="senha" placeholder="Confirmar senha" id="conSenha" required>
+            </div>
+
+            <div class="campoTexto">
+                <input type="text" name="endereco" placeholder="Endereço" id="endereco" required>
+            </div>
+
+            <div class="campoTexto">
+                <input type="text" name="data" placeholder="Ano de Nascimento" id="data" minlength="4" maxlength="4" required>
+            </div>
+
+            <div class="campoTexto">
+                <input type="tel" name="telefone" placeholder="Celular" id="telefone" required>
+            </div>
+
+            <div class="btn-box">
+                <button class="btn" id="btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

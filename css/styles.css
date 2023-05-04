@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: rgb(164, 164, 212);
+}
+
+.form-box {
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    border: 3px solid black;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    box-shadow: 10px;
+    opacity: 95%;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 20px;
+}
+
+.campoTexto {
+    border-style: groove;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    width: 50%;
+    display: inline-block;
+}
+
+.campoTexto input {
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+    font-size: 12px;
+    border: none;
+    background: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.btn {
+    border-style: groove;
+    margin: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    padding: 5px;
+    cursor: pointer;
+    width: 20%;
+    overflow: hidden;
+    float: none;
+    height: 40px;
+    transition: all ease 0.5s;
+}
+
+.btn:hover {
+    background-color: rgb(170, 167, 167);
+}
+
+@media (max-width: 1024px) {
+    .form-box {
+        width: 50%;
+    }
+    
+    .btn {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-box {
+        width: 70%;
+    }
+    
+    .btn {
+        width: 30%;
+    }
+}
+
+@media (max-width: 425px) {
+    .form-box {
+        width: 80%;
+    }
+    
+    .btn {
+        width: 30%;
+        font-size: 8px;
+        height: 30px;
+    }
+
+    .campoTexto {
+        width: 80%;
+    }
+
+    .campoTexto input {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
