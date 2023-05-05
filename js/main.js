@@ -1,40 +1,32 @@
 const btn = document.getElementById('btn');
-const form = document.getElementById('form');
-const nome = document.getElementById('nome');
+const btn2 = document.getElementById('btn2');
+const formBox2 = document.getElementById('form-box2');
+const formBox = document.getElementById('form-box');
+const nomeInput = document.getElementById('nome');
 const emailInput = document.getElementById('email');
 const senhaInput = document.getElementById('senha');
 const conSenha = document.getElementById('conSenha');
 const endereco = document.getElementById('endereco');
-const anoInput = document.getElementById('data');
+const anoInput = document.getElementById('ano');
+const horaInput = document.getElementById('hora');
 const tel = document.getElementById('telefone');
+const output = document.getElementById('output');
+const campoTexto = document.getElementById('campoTexto');
+const form = document.getElementById('form');
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     
-    let data = new Date(),
-    ano = data.getFullYear();
-
-    idade = ano - anoInput.value;
-
-    if (idade < 18) {
-        alert('Você precisa ter acima de 18 anos!');
-        return;
-    }
-
-    if (anoInput === "") {
-        alert('Por favor, preencha a idade.')
-    }
-
-    if (nome.value === "") {
+    if (nomeInput.value === "") {
         alert('Por favor, preencha o nome.');
         return;
     }
-
+    
     if (emailInput.value === "" || !emailValidacao(emailInput.value)) {
         alert('Por favor, insira um email válido!');
         return;
     }
-
+    
     if (!senhaValidacao(senhaInput.value, 8, 20)) {
         alert('A senha precisa ter no mínimo 8 e no máximo 20 dígitos.');
         return;
@@ -50,12 +42,22 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
+    if (anoInput.value === "") {
+        alert('Por favor, preencha o dia da consulta.')
+        return;
+    }
+
+    if (horaInput.value === "") {
+        alert('Por favor, preencha o horário da consulta.')
+        return;
+    }
+
     if (tel.value === "" || !telValidacao(tel.value)) {
         alert('Por favor, insira um número de telefone válido');
         return;
     }
-
-    form.submit();
+    
+    show();
 });
 
 function emailValidacao(email) {
@@ -88,4 +90,18 @@ function telValidacao(telefone) {
     }
 
     return false;
+}
+
+function show() {
+    const p = document.createElement('p');
+    p.innerHTML = `Nome: ${nomeInput.value}<br>`,
+    p.innerHTML += `E-mail: ${emailInput.value}<br>`,
+    p.innerHTML += `Senha: ${senhaInput.value}<br>`,
+    p.innerHTML += `Endereço: ${endereco.value}<br>`,
+    p.innerHTML += `Consulta: ${anoInput.value} às ${horaInput.value}<br>`,
+    p.innerHTML += `Celular: ${tel.value}`;
+    output.appendChild(p);
+    formBox.style.display = "none";
+    output.style.display = "flex";
+    btn2.style.display = "flex";
 }
