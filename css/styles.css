@@ -14,7 +14,7 @@ body {
 .form-box {
     background-color: rgb(255, 255, 255);
     width: 30%;
-    height: 500px;
+    height: 550px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -49,7 +49,7 @@ h1 {
     width: 100%;
     padding: 5px;
     height: 30px;
-    font-size: 12px;
+    font-size: 15px;
     border: none;
     background: none;
     outline: none;
@@ -78,6 +78,54 @@ h1 {
     background-color: rgb(170, 167, 167);
 }
 
+.output {
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    border-radius: 20px;
+    border: 3px solid black;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: none;
+    box-shadow: 10px;
+    flex-direction: column-reverse;
+    background-color: rgb(255, 255, 255);
+}
+
+.output p {
+    font-size: 15px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.btn2 {
+    border-style: groove;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    padding: 5px;
+    cursor: pointer;
+    width: 20%;
+    overflow: hidden;
+    float: none;
+    height: 40px;
+    transition: all ease 0.5s;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn2:hover {
+    background-color: rgb(170, 167, 167);
+}
+
 @media (max-width: 1024px) {
     .form-box {
         width: 50%;
@@ -85,6 +133,10 @@ h1 {
     
     .btn {
         width: 30%;
+    }
+
+    .output {
+        width: 50%;
     }
 }
 
@@ -96,6 +148,16 @@ h1 {
     .btn {
         width: 30%;
     }
+
+    .output p {
+        font-size: 15px;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .output {
+        width: 50%;
+    }
 }
 
 @media (max-width: 425px) {
@@ -105,7 +167,7 @@ h1 {
     
     .btn {
         width: 30%;
-        font-size: 8px;
+        font-size: 10px;
         height: 30px;
     }
 
@@ -114,10 +176,14 @@ h1 {
     }
 
     .campoTexto input {
-        font-size: 10px;
+        font-size: 13px;
     }
 
     h1 {
         font-size: 20px;
+    }
+
+    .output {
+        width: 90%;
     }
 }
