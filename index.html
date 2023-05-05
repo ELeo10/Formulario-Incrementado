@@ -10,42 +10,48 @@
     <script src="./js/main.js" defer></script>
 </head>
 <body>
-    <div class="form-box">
+    <div class="form-box" id="form-box">
         <form id="form">
             <h1>Formulário</h1>
             
-            <div class="campoTexto">
-                <input type="text" name="nome" placeholder="Nome" id="nome" required>
+            <div class="campoTexto" id="campoTexto">
+                <input type="text" name="nome" placeholder="Nome" id="nome">
             </div>
 
-            <div class="campoTexto">
-                <input type="email" name="email" placeholder="E-mail" id="email" required>
+            <div class="campoTexto" id="campoTexto">
+                <input type="email" name="email" placeholder="E-mail" id="email">
             </div>
 
-            <div class="campoTexto">
-                <input type="password" name="senha" placeholder="Senha" id="senha" required>
+            <div class="campoTexto" id="campoTexto">
+                <input type="password" name="senha" placeholder="Senha" id="senha">
             </div>
 
-            <div class="campoTexto">
-                <input type="password" name="senha" placeholder="Confirmar senha" id="conSenha" required>
+            <div class="campoTexto" id="campoTexto">
+                <input type="password" name="senha" placeholder="Confirmar senha" id="conSenha">
             </div>
 
-            <div class="campoTexto">
-                <input type="text" name="endereco" placeholder="Endereço" id="endereco" required>
+            <div class="campoTexto" id="campoTexto">
+                <input type="text" name="endereco" placeholder="Endereço" id="endereco">
             </div>
 
-            <div class="campoTexto">
-                <input type="text" name="data" placeholder="Ano de Nascimento" id="data" minlength="4" maxlength="4" required>
+            <div class="campoTexto" id="campoTexto">
+                <input type="date" name="ano" id="ano" min="2023-01-01" max="2030-12-31">
             </div>
 
-            <div class="campoTexto">
-                <input type="tel" name="telefone" placeholder="Celular" id="telefone" required>
+            <div class="campoTexto" id="campoTexto">
+                <input type="time" name="hora" id="hora" min="08:00" max="18:00">
+            </div>
+
+            <div class="campoTexto" id="campoTexto">
+                <input type="tel" name="telefone" placeholder="Celular" id="telefone">
             </div>
 
             <div class="btn-box">
                 <button class="btn" id="btn" type="submit">Submit</button>
             </div>
         </form>
+    </div>
+    <div class="output" id="output"><button class="btn2" id="btn2" onclick="window.location.reload()">Resetar</button>
     </div>
 </body>
 </html>
