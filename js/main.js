@@ -13,6 +13,7 @@ const tel = document.getElementById('telefone');
 const output = document.getElementById('output');
 const campoTexto = document.getElementById('campoTexto');
 const form = document.getElementById('form');
+const res = document.getElementById('res');
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -93,14 +94,13 @@ function telValidacao(telefone) {
 }
 
 function show() {
-    const p = document.createElement('p');
-    p.innerHTML = `Nome: ${nomeInput.value}<br>`,
-    p.innerHTML += `E-mail: ${emailInput.value}<br>`,
-    p.innerHTML += `Senha: ${senhaInput.value}<br>`,
-    p.innerHTML += `Endereço: ${endereco.value}<br>`,
-    p.innerHTML += `Consulta: ${anoInput.value} às ${horaInput.value}<br>`,
-    p.innerHTML += `Celular: ${tel.value}`;
-    output.appendChild(p);
+    res.innerHTML = `Nome: ${nomeInput.value}<br>`,
+    res.innerHTML += `E-mail: ${emailInput.value}<br>`,
+    res.innerHTML += `Senha: ${senhaInput.value}<br>`,
+    res.innerHTML += `Endereço: ${endereco.value}<br>`,
+    res.innerHTML += `Consulta: ${anoInput.value} às ${horaInput.value}<br>`,
+    res.innerHTML += `Celular: ${tel.value}`;
+    
     formBox.style.display = "none";
     output.style.display = "flex";
     btn2.style.display = "flex";
