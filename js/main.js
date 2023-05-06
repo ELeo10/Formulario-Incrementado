@@ -15,6 +15,8 @@ const campoTexto = document.getElementById('campoTexto');
 const form = document.getElementById('form');
 const res = document.getElementById('res');
 
+var meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     
@@ -94,11 +96,15 @@ function telValidacao(telefone) {
 }
 
 function show() {
+    var ano = anoInput.value.slice(0, 4);
+    var mes = anoInput.value.slice(6, 7);
+    var dia = anoInput.value.slice(8, 10);
+    
     res.innerHTML = `Nome: ${nomeInput.value}<br>`,
     res.innerHTML += `E-mail: ${emailInput.value}<br>`,
     res.innerHTML += `Senha: ${senhaInput.value}<br>`,
     res.innerHTML += `Endereço: ${endereco.value}<br>`,
-    res.innerHTML += `Consulta: ${anoInput.value} às ${horaInput.value}<br>`,
+    res.innerHTML += `Consulta: ${dia} de ${meses[mes - 1]} de ${ano} às ${horaInput.value}<br>`,
     res.innerHTML += `Celular: ${tel.value}`;
     
     formBox.style.display = "none";
