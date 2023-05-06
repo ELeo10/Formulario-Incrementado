@@ -11,6 +11,8 @@ body {
     background-color: rgb(153, 212, 180);
 }
 
+/* Tela de cadastro */
+
 .form-box {
     background-color: rgb(255, 255, 255);
     width: 40%;
@@ -78,6 +80,8 @@ h1 {
     background-color: rgb(170, 167, 167);
 }
 
+/* Resultado do cadastro */
+
 .output {
     width: 30%;
     top: 50%;
@@ -92,14 +96,21 @@ h1 {
     text-align: center;
     display: none;
     box-shadow: 10px;
-    flex-direction: column-reverse;
+    flex-direction: column;
     background-color: rgb(255, 255, 255);
 }
 
-.output p {
-    font-size: 15px;
+#res {
+    font-size: 18px;
     padding: 20px;
-    margin: 20px;
+}
+
+#title {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin: 0;
 }
 
 .btn2 {
@@ -149,7 +160,7 @@ h1 {
         width: 30%;
     }
 
-    .output p {
+    #res {
         font-size: 15px;
         padding: 20px;
         margin: 20px;
@@ -157,6 +168,10 @@ h1 {
 
     .output {
         width: 50%;
+    }
+
+    #title {
+        font-size: 30px;
     }
 }
 
@@ -185,5 +200,47 @@ h1 {
 
     .output {
         width: 90%;
+    }
+}
+
+@media (max-width: 375px) {
+    #res {
+        font-size: 14px;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    #title {
+        font-size: 20px;
+    }
+
+    .btn2 {
+        font-size: 10px;
+        height: 30px;
+    }
+
+    .output {
+        height: 350px;
+    }
+}
+
+@media (max-width: 320px) {
+    #res {
+        font-size: 12px;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    #title {
+        font-size: 20px;
+    }
+
+    .btn2 {
+        font-size: 10px;
+        height: 30px;
+    }
+
+    .output {
+        height: 300px;
     }
 }
